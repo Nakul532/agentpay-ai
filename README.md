@@ -1,58 +1,58 @@
-# 🤖 AgentPay AI
+# 💸 AgentPay AI
 
-**Autonomous Agent Payment Gateway · Stablecoin-Powered API Marketplace**
+**Autonomous Agent Payment Gateway**
 Built by Nakul Shriman Karthikeyan · Fintech Analyst
 
-### 🌐 [**→ LIVE DEMO**](#) *(deploy URL pending)*
+### 🌐 [→ LIVE DEMO](https://agentpay-ai.streamlit.app)
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://agentpay-ai.streamlit.app)
 
 ---
 
 ## 🎯 Overview
 
-AgentPay AI is a working simulation of the **agentic commerce economy** — the next frontier of fintech where AI agents autonomously pay each other for services using stablecoins. Inspired by Coinbase's x402 protocol, Google Cloud's Pay.sh, and Visa's AI Commerce announcement (2025).
+AgentPay AI is a working autonomous agent payment gateway. Three AI agents (ResearchBot-α, TradingBot-β, ContentBot-γ) reason in real time using Google Gemini, decide which paid APIs to call, and settle payments to a mock USDC ledger. End-to-end reference implementation of the agentic commerce pattern inspired by Coinbase x402, Visa Intelligent Commerce, and Google Pay.sh.
 
-**Three AI agents** with different goals reason in real-time (powered by Google Gemini) about which APIs to call, then execute mock USDC payments with on-chain-style settlement.
+Try it live: https://agentpay-ai.streamlit.app
 
 ## ✨ Features
 
-- **3 Autonomous AI Agents**: ResearchBot-α, TradingBot-β, ContentBot-γ — each with unique goals, spending policies, and preferred API categories
-- **10-API Marketplace**: Weather, News, Market Data, Price Prediction, Volatility, Sentiment, GPU Compute, AI Image Gen, Translation, Code Execution
-- **Live AI Reasoning**: Gemini 2.0 Flash decides each agent's next API call based on their goal and recent activity
-- **Mock USDC Settlement**: Every transaction generates a blockchain-style hash, block number, gas cost, and settlement time
-- **Treasury Analytics**: Real-time spend by agent, API revenue, category split, cumulative spend timeline
-- **Spending Policies**: Per-transaction limits, daily limits, balance checks on every settlement
+- Real Gemini 2.0 Flash reasoning (each agent makes contextual buying decisions, not scripted ones)
+- 3 distinct AI agents with USDC wallets, spending policies, and AI-defined goals
+- 10-API marketplace (Weather, News, Market Data, Sentiment, Translation, GPU Compute, AI Image Gen, Code Execution, Price Prediction, Volatility)
+- Mock USDC settlement with sub-400ms latency
+- Live treasury analytics, transaction ledger, agent fleet dashboard
+- Dark fintech aesthetic (green accent, mock blockchain txn hashes)
+
+## 🤖 The 3 Autonomous Agents
+
+| Agent | Role | Wallet | Policy |
+|---|---|---|---|
+| ResearchBot-α 🟢 | Market research and news synthesis | $250 USDC | Conservative spending, prefers verified sources |
+| TradingBot-β 🟡 | Quantitative trading signals | $500 USDC | Aggressive, latency-sensitive, willing to pay premium for fresh data |
+| ContentBot-γ 🔴 | Content generation and translation | $150 USDC | Budget-conscious, prefers cheap APIs |
+
+The agents decide which APIs to call based on their goals. No hardcoded buying flows.
+
+## 🌐 Why This Matters in 2025-2026
+
+The autonomous agent payments category went mainstream:
+
+- **Coinbase x402** (May 2025) — HTTP 402 standard for AI agent payments
+- **Visa Intelligent Commerce** (Oct 2025) — AI agents shopping autonomously
+- **Google Pay.sh** — Agent-friendly payment rails
+- **Stripe** — Agentic payments work
+- **Citi forecast** — $4.6T agentic AI commerce by 2030
+
+AgentPay AI is a working reference implementation. The architecture: agents reason about cost vs benefit, choose APIs, settle payments, observe results.
 
 ## 🛠️ Tech Stack
 
-Python · Streamlit · Google Gemini API · Pandas · Plotly
+Python · Streamlit · Google Gemini 2.0 Flash · Plotly · python-dotenv
 
 ## 🚀 Run Locally
 
-```bash
-git clone https://github.com/Nakul532/agentpay-ai.git
-cd agentpay-ai
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env and add your Gemini API key (free at https://aistudio.google.com/apikey)
-streamlit run app.py
-```
-
-Works without an API key too — falls back to mock decision logic.
-
-## 🧠 The Agentic Economy Context
-
-In 2026, AI agents are transitioning from chatbots to autonomous economic actors. Industry signals:
-
-- **Coinbase x402 (Apr 2025)**: HTTP-native protocol for AI agents to make stablecoin micropayments per API call
-- **Google Pay.sh + Solana (Aug 2025)**: Stablecoin-powered agentic checkout
-- **Visa Intelligent Commerce (Oct 2025)**: AI-powered commerce platform with embedded agent payments
-- **McKinsey forecast**: $3-5T agentic commerce market by 2030
-
-AgentPay AI demonstrates the core fintech infrastructure this economy needs:
-1. Agent identity (wallet addresses)
-2. Spending policies (per-txn limits, daily caps)
-3. Sub-cent micropayments (settlement in ms, not days)
-4. Audit trails (every payment includes AI reasoning + on-chain receipt)
+Clone the repo, install requirements, copy .env.example to .env, add your Gemini API key (free at https://aistudio.google.com/apikey), then run streamlit run app.py.
 
 ## 👤 About the Builder
 
@@ -63,4 +63,4 @@ M.S. Engineering Management, Northeastern University · Fintech Analyst · IEEE 
 
 ## ⚖️ Disclaimer
 
-All payments are mock USDC. No real blockchain transactions occur. No real funds. This project demonstrates the technical architecture of agentic payments, not a production payment system.
+Mock USDC ledger only. No real blockchain, no real payments, no real API integrations beyond Gemini for agent reasoning. Demonstrates the autonomous agent payment architecture, not a production payment system.
